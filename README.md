@@ -467,6 +467,20 @@ While Theom shows promise in its integration capabilities with major cloud provi
 
 ## Comparisons
 
+### Vendor Coverage
+```mermaid
+  %% Bar chart to represent the Total percentage for each vendor
+  graph LR
+    subgraph "Vendor Coverage Comparison"
+    direction TB
+      Varonis["Varonis - 67%"]
+      Cyera["Cyera - 80%"]
+      Bedrock["Bedrock - 100%"]
+      Theom["Theom - 83%"]
+    end
+```
+SVG URL: https://www.mermaidchart.com/raw/49c32453-c5a9-4c4a-a1ef-be5508de5b71?theme=light&version=v0.1&format=svg
+
 ### Data Coverage
 ```mermaid
 ---
