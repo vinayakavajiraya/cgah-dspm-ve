@@ -339,19 +339,19 @@ Further development and improvements in these areas would be necessary for Cyera
 
 <br/>
 
-**[WIP] Cost Analysis:**
+**Cost Analysis:**
 
-| Element | Cost (USD) |
-|---|---|
-| Day 1 - Tuesday| $ |
-| Day 2 - Wednesday | $ |
-| Day 3 - Thursday | $ |
-| Day 4 - Friday | $ |
-| Day 5 - Saturday | $ |
-| Day 6 - Sunday | $ |
-| Day 7 - Monday | $ |
-| **Total** | **$** |
-|||
+| Element           | AWS Costs (USD) | Azure Costs (USD) |
+|-------------------|-----------------|--------------------|
+| Day 1 - Tuesday   | $   40.98       | $   2.08          |
+| Day 2 - Wednesday | $   29.31       | $   5.21          |
+| Day 3 - Thursday  | $   55.37       | $   8.77          |
+| Day 4 - Friday    | $   29.71       | $   8.48          |
+| Day 5 - Saturday  | $   27.87       | $  39.54          |
+| Day 6 - Sunday    | $   63.01       | $ 128.85          |
+| Day 7 - Monday    | $   33.49       | $ 160.00          |
+| **Total**         | **$ 279.74**    | **$ 352.93**      |
+
 
 #### Evaluation Summary
 
@@ -441,19 +441,18 @@ While Bedrock shows promise in its integration capabilities with major cloud pro
 
 <br/>
 
-**[WIP] Cost Analysis:**
+**Cost Analysis:**
 
-| Element | Cost (USD) |
-|---|---|
-| Day 1 - Tuesday| $ |
-| Day 2 - Wednesday | $ |
-| Day 3 - Thursday | $ |
-| Day 4 - Friday | $ |
-| Day 5 - Saturday | $ |
-| Day 6 - Sunday | $ |
-| Day 7 - Monday | $ |
-| **Total** | **$** |
-|||
+| Element           | AWS Costs (USD) | Azure Costs (USD) |
+|-------------------|-----------------|--------------------|
+| Day 1 - Tuesday   |     $99.24      |    $8.12          |
+| Day 2 - Wednesday |    $184.62      |   $28.88          |
+| Day 3 - Thursday  |    $127.55      |   $15.89          |
+| Day 4 - Friday    |    $128.43      |   $19.08          |
+| Day 5 - Saturday  |    $124.59      |   $31.58          |
+| Day 6 - Sunday    |    $120.48      |   $30.59          |
+| Day 7 - Monday    |    $120.97      |   $26.46          |
+| **Total**         | **$905.88**     | **$160.60**       |
 
 #### Evaluation Summary
 
