@@ -136,19 +136,18 @@ This section consists the summary of checklist for each vendor to integrates wit
 
 <br/>
 
-**[WIP] Cost Analysis:**
+**Cost Analysis:**
 
-| Element | Cost (USD) |
-|---|---|
-| Day 1 - Tuesday| $ |
-| Day 2 - Wednesday | $ |
-| Day 3 - Thursday | $ |
-| Day 4 - Friday | $ |
-| Day 5 - Saturday | $ |
-| Day 6 - Sunday | $ |
-| Day 7 - Monday | $ |
-| **Total** | **$** |
-|||
+| Element           | AWS Costs (USD) | Azure Costs (USD) |
+|-------------------|-----------------|-------------------|
+| Day 1 - Tuesday   | $ 377.88        | $ 148.65          |
+| Day 2 - Wednesday | $ 681.64        | $ 463.28          |
+| Day 3 - Thursday  | $ 1605.05       | $ 351.43          |
+| Day 4 - Friday    | $ 1421.21       | $ 327.25          |
+| Day 5 - Saturday  | $ 857.58        | $ 124.36          |
+| Day 6 - Sunday    | $ 821.56        | $  97.34          |
+| Day 7 - Monday    | $ 338.82        | $  75.50          |
+| **Total**         | **$ 6,103.74**  |**$ 1,587.81**     |
 
 #### Evaluation Summary
 
@@ -237,19 +236,19 @@ Varonis showed limited capabilities in meeting the requirements of Capital Group
 
 <br/>
 
-**[WIP] Cost Analysis:**
+**Cost Analysis:**
 
-| Element | Cost (USD) |
-|---|---|
-| Day 1 - Tuesday| $ |
-| Day 2 - Wednesday | $ |
-| Day 3 - Thursday | $ |
-| Day 4 - Friday | $ |
-| Day 5 - Saturday | $ |
-| Day 6 - Sunday | $ |
-| Day 7 - Monday | $ |
-| **Total** | **$** |
-|||
+
+| Element           | AWS Costs (USD) | Azure Costs (USD) |
+|-------------------|-----------------|-------------------|
+| Day 1 - Tuesday   | $ 41.88         | $ 23.81           |
+| Day 2 - Wednesday | $ 8052.54       | $ 189.06          |
+| Day 3 - Thursday  | $ 4020.68       | $ 85.28           |
+| Day 4 - Friday    | $ 375.94        | $ 60.35           |
+| Day 5 - Saturday  | $ 310.00        | $ 60.43           |
+| Day 6 - Sunday    | $ 183.00        | $ 59.00           |
+| Day 7 - Monday    | $ 147.36        | $ 19.73           |
+| **Total**         | **$ 13,131.40** |**$ 497.66**       |
 
 #### Evaluation Summary
 Cyera demonstrates strong capabilities in data discovery and classification across multiple cloud platforms, including AWS, Azure, Snowflake, and Office 365. However, the evaluation reveals several significant limitations:
