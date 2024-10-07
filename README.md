@@ -263,6 +263,18 @@ While Cyera shows promise in its integration capabilities with major cloud provi
 
 CG should carefully consider these limitations before adopting Cyera as their DSPM solution. Further development and improvements in these areas would be necessary for Cyera to provide a more comprehensive and reliable DSPM offering.
 
+Test Mermaid Block in GitHub
+
+```mermaid
+graph TD
+    A[Start Evaluation] --> B[Define Criteria]
+    B --> C[Evaluate Vendors]
+    C --> D[Compare Results]
+    D --> E[Make Recommendation]
+    E --> F[Conclude Evaluation]
+```
+
+
 ## Comparison Matrix
 
 ## Recommendation
@@ -275,3 +287,4 @@ CG should carefully consider these limitations before adopting Cyera as their DS
 1. SIEM - Security Information and Event Management
 2. SOAR - Security Orchestration, Automation and Response
 3. 
+
