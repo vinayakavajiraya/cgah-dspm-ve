@@ -28,7 +28,7 @@ This section outlines the DSPM vendor evaluation process, detailing the methodol
 ### Integration Criteria
 This section consists the summary of checklist for each vendor to integrates with our existing cloud environments and respective stacks. Considerations include:
 
-1. Deployment/integration documentation
+1. Deployment/Integration documentation
 2. Deployment patterns
 3. Support for following stack
     * AWS
@@ -140,14 +140,15 @@ This section consists the summary of checklist for each vendor to integrates wit
 
 | Element           | AWS Costs (USD) | Azure Costs (USD) |
 |-------------------|-----------------|-------------------|
-| Day 1 - Tuesday   | $ 377.88        | $ 148.65          |
-| Day 2 - Wednesday | $ 681.64        | $ 463.28          |
-| Day 3 - Thursday  | $ 1605.05       | $ 351.43          |
-| Day 4 - Friday    | $ 1421.21       | $ 327.25          |
-| Day 5 - Saturday  | $ 857.58        | $ 124.36          |
-| Day 6 - Sunday    | $ 821.56        | $  97.34          |
-| Day 7 - Monday    | $ 338.82        | $  75.50          |
-| **Total**         | **$ 6,103.74**  |**$ 1,587.81**     |
+| Day 1 - Tuesday   | $ 426.40        | $ 156.65          |
+| Day 2 - Wednesday | $ 1,136.53      | $ 479.16          |
+| Day 3 - Thursday  | $ 2,435.86      | $ 562.51          |
+| Day 4 - Friday    | $ 1,943.15      | $ 432.22          |
+| Day 5 - Saturday  | $ 1,147.90      | $ 145.34          |
+| Day 6 - Sunday    | $ 1,040.54      | $ 140.23          |
+| Day 7 - Monday    | $ 534.88        | $ 128.81          |
+| **Total**         | **$ 8,665.26**  | **$ 2,044.92**    |
+
 
 #### Evaluation Summary
 
@@ -238,17 +239,16 @@ Varonis showed limited capabilities in meeting the requirements of Capital Group
 
 **Cost Analysis:**
 
-
 | Element           | AWS Costs (USD) | Azure Costs (USD) |
 |-------------------|-----------------|-------------------|
-| Day 1 - Tuesday   | $ 41.88         | $ 23.81           |
-| Day 2 - Wednesday | $ 8052.54       | $ 189.06          |
-| Day 3 - Thursday  | $ 4020.68       | $ 85.28           |
-| Day 4 - Friday    | $ 375.94        | $ 60.35           |
-| Day 5 - Saturday  | $ 310.00        | $ 60.43           |
-| Day 6 - Sunday    | $ 183.00        | $ 59.00           |
-| Day 7 - Monday    | $ 147.36        | $ 19.73           |
-| **Total**         | **$ 13,131.40** |**$ 497.66**       |
+| Day 1 - Tuesday   | $ 281.03        | $ 24.44           |
+| Day 2 - Wednesday | $ 8464.45       | $ 189.06          |
+| Day 3 - Thursday  | $ 4704.03       | $ 85.28           |
+| Day 4 - Friday    | $ 598.74        | $ 60.35           |
+| Day 5 - Saturday  | $ 526.60        | $ 60.43           |
+| Day 6 - Sunday    | $ 400.97        | $ 59.00           |
+| Day 7 - Monday    | $ 361.35        | $ 19.73           |
+| **Total**         | **$ 15337.17**  | **$ 498.29**      |
 
 #### Evaluation Summary
 Cyera demonstrates strong capabilities in data discovery and classification across multiple cloud platforms, including AWS, Azure, Snowflake, and Office 365. However, the evaluation reveals several significant limitations:
@@ -343,14 +343,14 @@ Further development and improvements in these areas would be necessary for Cyera
 
 | Element           | AWS Costs (USD) | Azure Costs (USD) |
 |-------------------|-----------------|--------------------|
-| Day 1 - Tuesday   | $   40.98       | $   2.08          |
-| Day 2 - Wednesday | $   29.31       | $   5.21          |
-| Day 3 - Thursday  | $   55.37       | $   8.77          |
-| Day 4 - Friday    | $   29.71       | $   8.48          |
-| Day 5 - Saturday  | $   27.87       | $  39.54          |
-| Day 6 - Sunday    | $   63.01       | $ 128.85          |
-| Day 7 - Monday    | $   33.49       | $ 160.00          |
-| **Total**         | **$ 279.74**    | **$ 352.93**      |
+| Day 1 - Tuesday   | $   289.59      | $   30.69       |
+| Day 2 - Wednesday | $   268.57      | $   47.03       |
+| Day 3 - Thursday  | $   304.10      | $   55.87       |
+| Day 4 - Friday    | $   278.71      | $   48.29       |
+| Day 5 - Saturday  | $   269.23      | $   66.57       |
+| Day 6 - Sunday    | $   315.93      | $   125.22       |
+| Day 7 - Monday    | $   289.74      | $   91.03       |
+| **Total**         | **$ 2015.87**   | **$ 464.70**     |
 
 
 #### Evaluation Summary
@@ -445,14 +445,14 @@ While Bedrock shows promise in its integration capabilities with major cloud pro
 
 | Element           | AWS Costs (USD) | Azure Costs (USD) |
 |-------------------|-----------------|--------------------|
-| Day 1 - Tuesday   |     $99.24      |    $8.12          |
-| Day 2 - Wednesday |    $184.62      |   $28.88          |
-| Day 3 - Thursday  |    $127.55      |   $15.89          |
-| Day 4 - Friday    |    $128.43      |   $19.08          |
-| Day 5 - Saturday  |    $124.59      |   $31.58          |
-| Day 6 - Sunday    |    $120.48      |   $30.59          |
-| Day 7 - Monday    |    $120.97      |   $26.46          |
-| **Total**         | **$905.88**     | **$160.60**       |
+| Day 1 - Tuesday   | $   356.31      | $   71.92       |
+| Day 2 - Wednesday | $   449.62      | $   49.98       |
+| Day 3 - Thursday  | $   377.97      | $   36.67       |
+| Day 4 - Friday    | $   374.17      | $   39.90       |
+| Day 5 - Saturday  | $   364.11      | $   52.33       |
+| Day 6 - Sunday    | $   360.66      | $   50.48       |
+| Day 7 - Monday    | $   366.60      | $   45.40       |
+| **Total**         | **$ 2649.44**   | **$ 346.68**     |
 
 #### Evaluation Summary
 
