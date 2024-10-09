@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varonis - AWS vs Azure Cost Burn Down</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Day', 'AWS (USD)', 'Azure (USD)'],
+                ['Tuesday', 426.40, 156.65],
+                ['Wednesday', 1136.53, 479.16],
+                ['Thursday', 2435.86, 562.51],
+                ['Friday', 1943.15, 432.22],
+                ['Saturday', 1147.90, 145.34],
+                ['Sunday', 1040.54, 140.23],
+                ['Monday', 534.88, 128.81]
+            ]);
+
+            var options = {
+                title: 'Varonis - AWS vs Azure Cost Burn Down',
+                isStacked: true,
+                hAxis: {
+                    title: 'Days',
+                },
+                vAxis: {
+                    title: 'Cost (USD)',
+                },
+                colors: ['#1b9e77', '#d95f02'],
+                legend: { position: 'top' }
+            };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('column_chart'));
+            chart.draw(data, options);
+            
+            // Adding the line chart overlay
+            var lineData = new google.visualization.DataTable();
+            lineData.addColumn('string', 'Day');
+            lineData.addColumn('number', 'Peak Cost');
+            lineData.addRows([
+                ['Tuesday', 583.05], // 426.40 + 156.65
+                ['Wednesday', 1615.69], // 1136.53 + 479.16
+                ['Thursday', 2998.37], // 2435.86 + 562.51
+                ['Friday', 2375.37], // 1943.15 + 432.22
+                ['Saturday', 1293.24], // 1147.90 + 145.34
+                ['Sunday', 1180.77], // 1040.54 + 140.23
+                ['Monday', 663.69] // 534.88 + 128.81
+            ]);
+
+            var lineOptions = {
+                title: 'Varonis - AWS vs Azure Peak Cost',
+                curveType: 'function',
+                legend: { position: 'none' },
+                vAxis: {
+                    title: 'Peak Cost (USD)',
+                    minValue: 0
+                },
+                colors: ['#FF5733'], // Line color for peak values
+                series: { 0: { type: 'line', lineWidth: 2 } }
+            };
+
+            var lineChart = new google.visualization.LineChart(document.getElementById('line_chart'));
+            lineChart.draw(lineData, lineOptions);
+        }
+
+        // Responsive chart drawing
+        function resizeCharts() {
+            drawChart();
+        }
+
+        // Redraw charts on window resize
+        window.addEventListener('resize', resizeCharts);
+    </script>
+    <style>
+        /* Container styles for responsiveness */
+        #column_chart, #line_chart {
+            width: 100%;
+            height: 500px;
+            min-height: 300px; /* Ensure a minimum height */
+        }
+    </style>
+</head>
+<body>
+    <div id="column_chart"></div>
+    <div id="line_chart"></div>
+</body>
+</html>

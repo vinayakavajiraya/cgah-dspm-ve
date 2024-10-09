@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div id="chart_div" style="width: 100%; height: 100vh;"></div>
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Data Source', 'Discovery Coverage'],
+                ['AWS', 10],
+                ['Azure', 20],
+                ['Snowflake', 100],
+                ['Databricks', 0],
+                ['Office 365', 100],
+                ['SQL Server on EC2', 0]
+            ]);
+
+            var options = {
+                title: 'Varonis Data Coverage',
+                hAxis: {title: 'Data Source'},
+                vAxis: {title: 'Discovery Coverage (%)', minValue: 0, maxValue: 120},
+                legend: 'none',
+            };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+
+            // Make the chart responsive
+            window.addEventListener('resize', function() {
+                chart.draw(data, options);
+            });
+        }
+    </script>
+</body>
+</html>
