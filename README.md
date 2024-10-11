@@ -88,7 +88,7 @@ This section consists the summary of checklist for each vendor to integrates wit
 
 **Varonis Data Coverage:**
 
-![Varonis Data Coverage](assets/varonis-data-coverage.png)
+![Varonis Data Coverage](assets/vendor-a-data-coverage.png)
 
 Referece URL for HTML chart: <a href="varonis-data-coverage-chart.html" target="_blank">Varonis Data Coverage Chart</a>
 
@@ -97,7 +97,7 @@ Referece URL for HTML chart: <a href="varonis-data-coverage-chart.html" target="
 
 ![Varonis AWS Azure Peak Cost](assets/varonis-aws-azure-peak-cost.png)
 
-Referece URL for HTML chart: <a href="varonis-cost-burndown-chart.html" target="_blank">Varonis Cost Burn Down Charts</a>
+Referece URL for HTML chart: <a href="https://dccpl.work/cgah-dspm-ve/vendor-a/vendor-a-cost-burndown-chart.html" target="_blank">Varonis Cost Burn Down Charts</a>
 
 
 #### Evaluation Summary

@@ -3,7 +3,7 @@
 
 #### Overview
 * Wrong server (EKS clusters) sizing for deployment due to which the data discovery was not complete.
-* Very expensive yet completing only 14% of the data discovery out of 240 TB data.
+* Very expensive yet completing only 14% of the data discovery out of 240 TB data. [!note - Varonis team mentioned that they were able to scan the 80% of data but the Varonis dashboard was shoing the data volumes in GBs, which is not correct. Please refer Varonis review meeting recordings for dashboard screens].
 * No support for databricks.
 * Lack of details in the product documentation.
 * Good integration with Office 365. 
