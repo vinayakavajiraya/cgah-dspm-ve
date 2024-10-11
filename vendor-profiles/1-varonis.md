@@ -13,20 +13,21 @@
 
 
 #### Key Features
-| Varonis Feature | Availability | Description | $\textcolor{Red}{\text{Notes [For Ahead Only]}}$ |
-|---|---|---|---|
-| Data Discovery    | ❕ | Limited identification and classification of data from various resources.  | -  Varonis team did not discover all the buckets and data sources. Please refer to [Screenshot from Varonis Data Store Dashboard on Review Day:](#screenshot-from-varonis-data-store-dashboard-on-review-day). <br/><br/> - Varonis attemted twice reasoning the strict policy rules setup yet failed to discover the data. <br/><br/> - Varonis calims that 180 TB of data was scanned in their report yet their dashboard reports are showing very limited coverage. Please follow the screenshots and charts below.|
-| Data Classification | ❌ | Categorizes data based on Varonis data dictionary and not based on sampling. Custom headers or Key names were requested by Varonis team for mapping | - Varonis team requested for data catalog or mapping document for obfuscated column name or key names. <br/><br/> - The absence of Databricks integration restricts the Varonis platform's classification ranking when compared with other vendors. |
-| Risk Assessment   | ✓ | Evaluates data security risks and provides actionable insights | - Varonis report has the relevant screenshots and same information was shared on review day.|
-| Access Control    | ❕ | Data access permissions monitoring was not robust and not reliable for Azure data stores. | - Varonis team demonstrated this feature only for AWS, Snkowflake and not for Azure data stores:  databases, blob storage amd ADLS Gen 2. <br/><br/> -On review day, Varonis primarily focused on AWS resources and Snowflake only. |
-| Compliance Monitoring | ✓ | Ensures adherence to regulatory requirements and industry standards | - Varonis team provided good insights on the review day about the capabilities of their platform on compliance monitoring features. |
-| Threat Detection  | ❌ | Potential security threats and anomalies detection rate is not accurate and less reliable | - Considering the partial data discovery and the lack of classifications for obfuscated values, Varonis platform cannot be deemed as a viable platform.  |
-| Data Encryption   | ❕ | Varonis team did not provide insights on how sampling data is transmitted to Varonis cloud for classification | |
-| Activity Monitoring | ✓ | Tracks and logs user activities related to sensitive data | - Varonis team showcased good insights on service accounts and user activity monitoring features. <br/><br/> - Varonis conducts scans at scheduled intervals; therefore, it does not monitor activity in real-time. This is common across all DSPM vendors. |
-| Incident Response | ❕ | Provides tools and workflows for responding to security incidents. | - Varonis team did not demonstrate incident response capabilities in detail except role assumptions. <br/><br/> - Varonis platform failed to detect the data movements like copying or deleting the records out of AWS or Azure to online Excel or reading data from Snowflake and creating the PII JSONs in S3 bucket and deleting records in RDS instances.|
-| Integration Capabilities | ❕ | Connects with existing security tools and cloud platforms | - No integration with Databricks yet. <br/><br/> - Varonis team mentioned that, "Databricks integration will be available in next quarter but cannot commit on dates as they are public traded company!" |
-| Reporting and Analytics | ❕ | Generates high level reports and provides data visualization | |
-| Automated Remediation | ❌ | Does not or atleast this feature was not demonstrated, which offers automated solutions for addressing identified security issues. <br/> Note: Scan was incomplete. | |
+| Varonis Feature | Availability    | Description | $\textcolor{Red}{\text{Notes [For Ahead Only]}}$ |
+|---                        |---    |---|---|
+| Data Discovery            | ❕    | Limited identification and classification of data from various resources.  | -  Varonis team did not discover all the buckets and data sources. Please refer to [Screenshot from Varonis Data Store Dashboard on Review Day:](#screenshot-from-varonis-data-store-dashboard-on-review-day). <br/><br/> - Varonis attemted twice reasoning the strict policy rules setup yet failed to discover the data. <br/><br/> - Varonis calims that 180 TB of data was scanned in their final report yet their dashboard are showing very limited coverage. Please follow the screenshots and charts below.|
+| Data Classification       | ❌    | Categorizes data based on Varonis data dictionary and not based on sampling. Custom headers or Key names were requested by Varonis team for mapping | - Varonis team requested for data catalog or mapping document for obfuscated column name or key names. <br/><br/> - The absence of Databricks integration restricts the Varonis platform's classification ranking when compared with other vendors. |
+| Risk Assessment           | ✓    | Evaluates data security risks and provides actionable insights | - Varonis report has the relevant screenshots and same information was shared on review day.|
+| Access Control            | ❕    | Data access permissions monitoring was not robust and not reliable for Azure data stores. | - Varonis team demonstrated this feature only for AWS, Snkowflake and not for Azure data stores:  databases, blob storage amd ADLS Gen 2. <br/><br/> -On review day, Varonis primarily focused on AWS resources and Snowflake only. |
+| Compliance Monitoring     | ✓    | Ensures adherence to regulatory requirements and industry standards | - Varonis team provided good insights on the review day about the capabilities of their platform on compliance monitoring features. |
+| Threat Detection          | ❌    | Potential security threats and anomalies detection rate is not accurate and less reliable | - Considering the partial data discovery and the lack of classifications for obfuscated values, Varonis platform cannot be deemed as a viable platform.  |
+| Data Encryption           | ❕    | Varonis team did not provide insights on how sampling data is transmitted to Varonis cloud for classification | |
+| Activity Monitoring       | ✓    | Tracks and logs user activities related to sensitive data | - Varonis team showcased good insights on service accounts and user activity monitoring features. <br/><br/> - Varonis conducts scans at scheduled intervals; therefore, it does not monitor activity in real-time. This is common across all DSPM vendors. |
+| Incident Response         | ❕    | Provides tools and workflows for responding to security incidents. | - Varonis team did not demonstrate incident response capabilities in detail except role assumptions. <br/><br/> - Varonis platform failed to detect the data movements like copying or deleting the records out of AWS or Azure to online Excel or reading data from Snowflake and creating the PII JSONs in S3 bucket and deleting records in RDS instances.|
+| Integration Capabilities  | ❕    | Connects with existing security tools and cloud platforms | - No integration with Databricks yet. <br/><br/> - Varonis team mentioned that, "Databricks integration will be available in next quarter but cannot commit on dates as they are public traded company!" |
+| Reporting and Analytics   | ❕    | Generates high level reports and provides data visualization | |
+| Automated Remediation     | ❌    | Does not or atleast this feature was not demonstrated, which offers automated solutions for addressing identified security issues. <br/> Note: Scan was incomplete. | |
+||||
 
 #### <u>Strengths & Weaknesses</u>
 
@@ -89,13 +90,12 @@ HTML Chart URL: <a href="https://dccpl.work/cgah-dspm-ve/vendor-a/vendor-a-data-
 
 #### Varonis Data Coverage
 ![Varonis Resource Coverage](../assets/varonis/Varonis-Resource-Coverage.png)
-Above is the screenshot from Varonis 
+Screenshot of Monitored Data Stores from Varonis platform
 
-$\textcolor{Red}{\text{Notes [For Ahead Only]}}$:
-- Varonis team mentioned that they were able to scan the 80% of yet the dashboard was showing the data volumes in GBs, which is not correct. Please refer Varonis review meeting recordings for dashboard screens.
-- Varonis team also mentioned that, due to strict policy rules, data discovery was not complete in the first attempt. Relaxing the policy rules, Varonis team made a second attempt to perform the rescan yet the disocvery rate is low in comparision with fisrt attempt. Refer above screenshot.
-- Not able to login to Varonis app starting from 11-Oct-2024.
-
+$\textcolor{Red}{\text{Important Observations [For Ahead Only]}}$:
+- While Varonis reported scanning 80% of the data environment, the dashboard displayed significantly lower data volumes, raising concerns about the accuracy of the reported coverage. Please refer to the Varonis review meeting recordings for dashboard details.
+- Varonis attributed the initial incomplete data discovery to overly restrictive policy rules. Despite adjustments to these rules for a second scan, the discovery rate remained significantly lower than expected. Refer to the screenshot above.
+- Access to the Varonis application has been unavailable since October 11, 2024.
 ***
 <br/>
 
@@ -124,7 +124,7 @@ Referece URL for HTML chart: <a href="https://dccpl.work/cgah-dspm-ve/vendor-a/v
 
 #### Evaluation Summary
 
-Varonis showed limited capabilities in meeting the requirements of Capital Group's data security posture management (DSPM) needs. Challenges included incomplete data discovery due to infrastructure issues, reliance on custom data dictionaries for classification instead of a robust sampling mechanism, and a lack of demonstrated threat detection capabilities. Furthermore, the solution was found to be very expensive for the scope of data discovery achieved, making it a non-viable option in comparison to other vendors. The overall integration process also proved complex, with minimal or few missing details available in product documentation. Varonis is recommended for exploration when data privacy and governance is important within Office 365 environment.
+Varonis demonstrated limited capabilities in meeting Capital Group's data security posture management (DSPM) requirements. Challenges included incomplete and potentially inaccurate data discovery due to platform limitations and configuration complexities, reliance on custom data dictionaries for classification instead of robust data sampling, and insufficient threat detection capabilities.  Furthermore, the solution's high cost relative to the limited data discovery achieved positioned it as a less competitive option compared to other vendors. The integration process was also complex, with gaps in product documentation. While Varonis might be suitable for organizations prioritizing data privacy and governance within Office 365 environments, it did not adequately address Capital Group's broader DSPM needs. 
 
 ***
 #### References
@@ -132,7 +132,7 @@ Varonis showed limited capabilities in meeting the requirements of Capital Group
 
 2. Excel file containing Varonis response on FR and NFRs: [Download Excel File](../assets/varonis/Varonis_Final_Report.20240924.xlsx)
 
-3. Final Report: [Download PDF File](../assets/varonis/Varonis_Final_Report_Overview.20240913.pdf)
+3. Final Report by Varonis: [Download PDF File](../assets/varonis/Varonis_Final_Report_Overview.20240913.pdf)
 
 4. Varonis team requested meeting recording for their product development team stating in an email, "There were a lot of great topics included in today’s discussion. Would you be able to send over the recording so we can send to our product development team?" ![Download Email](../assets/varonis/varonis-meeting-recording-request.png)
 ***
