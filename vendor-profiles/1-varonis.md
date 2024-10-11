@@ -2,13 +2,13 @@
 ### Rating: 1.33
 
 #### Overview
-* Wrong server (EKS clusters) sizing for deployment due to which the data discovery was not complete.
-* Very expensive yet completing only 14% of the data discovery out of 240 TB data. [!note - Varonis team mentioned that they were able to scan the 80% of data but the Varonis dashboard was shoing the data volumes in GBs, which is not correct. Please refer Varonis review meeting recordings for dashboard screens].
-* No support for databricks.
+* Very expensive yet completing only 14% of the data discovery out of 240 TB data.
+* Varonis do not provide support for databricks yet.
 * Lack of details in the product documentation.
-* Good integration with Office 365. 
-* <span style="color: orange;">Data classification is based on columns (RD) or keys (in JSON) or headers (CSV).</span>
-* <span style="color: orange;">Requested data dictionary for custom headers or keys for mapping to data sources, which shouldn't be case for DSPM vendor.</span>
+* Good integration with Office 365.
+* Wrong server (EKS clusters) sizing for deployment due to which the data discovery was not complete.  
+* $\textcolor{orange}{\text{Data classification is based on columns (RD) or keys (in JSON) or headers (CSV).}}$
+* $\textcolor{orange}{\text{Requested data dictionary for custom headers or keys for mapping to data sources, which shouldn't be case for DSPM vendor.}}$
 
 
 #### Key Features
@@ -71,9 +71,18 @@
 | Office 365 | 100% |
 | SQL Server on EC2 | 0% |
 | **Total** | **38%** |
+|||
+
+Chart URL: <a href="https://dccpl.work/cgah-dspm-ve/vendor-a/vendor-a-data-coverage-chart.html" target="_blank">Varonis Data Discovery Chart</a>
+
+<br/>
 
 #### Varonis Data Coverage
 ![Varonis Resource Coverage](../assets/Varonis-Resource-Coverage.png)
+
+Note:
+- Varonis team mentioned that they were able to scan the 80% of yet the dashboard was showing the data volumes in GBs, which is not correct. Please refer Varonis review meeting recordings for dashboard screens.
+- Varonis team also mentioned that, due to strict policy rules, data discovery was not complete in the first attempt. Relaxing the policy rules, Varonis team made a second attempt to perform the rescan yet the disocvery rate is low in comparision with fisrt attempt. Refer above screenshot. 
 
 <br/>
 
@@ -93,7 +102,7 @@
 
 Varonis AWS and Azure Burn Down and Peak Cost
 <br/>
-URL: <a href="../charts/varonis-cost-burndown-chart.html" target="_blank">Varonis Cost Burn Down</a>
+URL: <a href="https://dccpl.work/cgah-dspm-ve/vendor-a/vendor-a-cost-burndown-chart.html" target="_blank">Varonis Cost Burn Down</a>
 
 #### Evaluation Summary
 
