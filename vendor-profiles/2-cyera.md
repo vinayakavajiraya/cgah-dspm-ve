@@ -4,32 +4,32 @@
 
 #### Overview
 * Deployment was complete with all the required data sources except Databricks.
-* Data classification is limited but quite accurate. Few columns were left without classification like last 8 digits of SSN.
+* Data classification is very limited but accurate for classifed data. Many columns were left without classification like city name, driver license, date, last 8 digits of SSN and many more columns.
 * Very expensive! Ahead request to force stop the discovery of remaining data after two days as cost burn down was quite high for the first 50 TB data.
 * Good integration with Office 365.
 * No support for databricks.
-* No posture management with current version. Will be available in next releases of Cyera platform.
-* No audit trails in current version. One of the use case of role assumption was not demonstrated as the feature was not available in current version of Cyera.
-* <span style="color: red;">Uses most privilage mode (Administrator account is created when Cyera stack was deployed into Azure)</span>
-* <span style="color: red;">Cyera Team did not agreed to perform delta scan as they mentioned that, "We need to take permission from their higher authorities for doing this in POC"</span> 
-* <span style="color: orange;">Control over cluster scaling in and out is not possible as it's managed by DevOps team of Cyera (Backoffice channels). Uses Karpernter or similar technologies for K8s scaling.</span>
-* <span style="color: orange;">Business executives were overpowering the technical team and reviewers to perform limited tests in POC. (Proof: Please review all the meeting recordings for verification and conclusion on this observation.)</span>
+* $\textcolor{red}{\text{No posture management with current version. Will be available in next releases of Cyera platform.}}$
+* $\textcolor{red}{\text{No audit trails in current version. One of the use case of role assumption was not demonstrated as the feature was not available in current version of Cyera.}}$
+* $\textcolor{red}{\text{Uses most privilage mode (Administrator account is created when Cyera stack was deployed into Azure)}}$
+* $\textcolor{red}{\text{Cyera Team did not agreed to perform delta scan as they mentioned that, "We need to take permission from their higher authorities for doing this in POC"}}$
+* $\textcolor{orange}{\text{Control over cluster scaling in and out is not possible as it's managed by DevOps team of Cyera (Backoffice channels). Uses Karpernter or similar technologies for K8s scaling.}}$
+* $\textcolor{orange}{\text{Business executives were overpowering the technical team and reviewers to perform limited tests in POC. (Proof: Please review all the meeting recordings for verification and conclusion on this observation.)}}$
 
 #### Key Features
-| Cyera Feature | Availability | Description |
-|-------------------|---|-------------|
-| Data Discovery    | ✓ | Automatically identifies and catalogs sensitive data across various data sources |
-| Data Classification | ✓ | Data classification is based on sampling hence the classified data were quite accurate. Few obfuscated columns were left out like last 4 digits of SSN |
-| Risk Assessment   | ❕ | Evaluates data security risks and provides limited actionable insights and no data coverage tracability |
-| Access Control    | ❕ | Data access permissions monitoring was not robust and not reliable |
-| Compliance Monitoring | ✓ | Ensures adherence to regulatory requirements and industry standards |
-| Threat Detection  | ❌ | Potential security threats and anomalies detection rate is not accurate and less reliable |
-| Data Encryption   | ❕ | Cyera team did not provide insights on how sampling data is transmitted to Cyera cloud for classification |
-| Activity Monitoring | ✓ | Tracks and logs user activities related to sensitive data |
-| Incident Response | ❌ | Cyera team did not demonstrate this feature and mentioned that this feature is available in future releases of their product |
-| Integration Capabilities | ✓ | Connects with existing security tools and cloud platforms |
-| Reporting and Analytics | ✓ | Generates high level reports and provides data visualization along with data samples for verification |
-| Automated Remediation | ❌ | Does not or atleast this feature was not demonstrated, which offers automated solutions for addressing identified security issues. <br/> Note: Scan was incomplete due to force stop as cost burn down was high for the first 50 TB data. |
+| Cyera Feature             | Availability  | Description | $\textcolor{Red}{\text{Notes [For Ahead Only]}}$ |
+|-------------------        |--- |-------------|---|
+| Data Discovery            | ✓ | Automatically identifies and catalogs sensitive data across various data sources | - Cyera was able to discover all the data stores in AWS, Azure, Snowflake and Office 365. <br/><br/> - Databricks is not supported by Cyera. |
+| Data Classification       | ❕ | Data classification is based on sampling hence the classified data were quite accurate but very limited. | - Cyera's data calssification is accurate, only for limited data. <br/><br/> - Many simple columns like Driver license, city, URL or web address, ZIP code, and many more. <br/><br/> - [Please refer the screenshots for more details.](../assets/cyera/) |
+| Risk Assessment           | ❕ | Evaluates data security risks and provides limited actionable insights and no data coverage tracability | |
+| Access Control            | ❕ | Data access permissions monitoring was not robust and not reliable | |
+| Compliance Monitoring     | ✓ | Ensures adherence to regulatory requirements and industry standards | |
+| Threat Detection          | ❌ | Potential security threats and anomalies detection rate is not accurate and less reliable | |
+| Data Encryption           | ❕ | Cyera team did not provide insights on how sampling data is transmitted to Cyera cloud for classification | |
+| Activity Monitoring       | ✓ | Tracks and logs user activities related to sensitive data | |
+| Incident Response         | ❌ | Cyera team did not demonstrate this feature and mentioned that this feature is available in future releases of their product | |
+| Integration Capabilities  | ✓ | Connects with existing security tools and cloud platforms | |
+| Reporting and Analytics   | ✓ | Generates high level reports and provides data visualization along with data samples for verification | |
+| Automated Remediation     | ❌ | Does not or atleast this feature was not demonstrated, which offers automated solutions for addressing identified security issues. <br/> Note: Scan was incomplete due to force stop as cost burn down was high for the first 50 TB data. | |
 
 #### <u>Strengths & Weaknesses</u>
 

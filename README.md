@@ -65,24 +65,25 @@ This section consists the summary of checklist for each vendor to integrates wit
 
 
 #### Overview
-* Wrong server (EKS clusters) sizing for deployment due to which the data discovery was not complete.
 * Very expensive yet completing only 14% of the data discovery out of 240 TB data.
-* No support for databricks.
-* Lack of details in the product documentation.
-* Good integration with Office 365. 
-* <span style="color: orange;">Data classification is based on columns (RD) or keys (in JSON) or headers (CSV)</span>
-* <span style="color: orange;">Requested data dictionary for custom headers or keys for mapping to data sources, which shouldn't be case for DSPM vendor.</span>
+* Varonis do not provide support for databricks yet.
+* Lack of details in the product documentation. (Refer meeting recording on day one for postgres integration in Azure)
+* Good integration with Office 365.
+* Robust Compliance and Activity monitoring features.
+* Wrong server (EKS clusters) sizing for deployment due to which the data discovery was not complete.  
+* $\textcolor{orange}{\text{Data classification is based on columns (RD) or keys (in JSON) or headers (CSV).}}$
+* $\textcolor{orange}{\text{Requested data dictionary for custom headers or keys for mapping to data sources, which shouldn't be case for DSPM vendor.}}$
 
 
 #### Integration Checklist
 
 | Resource | Integration Status | Notes |
-|----------|------------|-------|
-| AWS      | Yes | - S3 Buckets <br/> - RDS for Oracle, Postgres, SQL Server  |
-| Azure    | Limited | - Azure AD integration <br> - Azure Blob storage access <br> - ADLS Gen 2 <br/> - Azure Database for Oracle, Postgres, SQL Server <br/> - Audit Logs were not enabled or integrated |
-| Snowflake| Yes | - Set up Snowflake account integration<br>- Configure access to relevant databases and schemas<br>- Verify query history and access logging |
-| Databricks| No |  |
-| Office 365| Yes | - Set up Microsoft Graph API integration<br>- Configure access to relevant services (SharePoint, OneDrive, etc.)<br>- Enable audit logging for Office 365 activities |
+|----------|------------        |-------|
+| AWS      | Yes                | - S3 Buckets <br/> - RDS for Oracle, Postgres, SQL Server  |
+| Azure    | Limited            | - Azure AD integration <br/> - Azure Blob storage <br> - ADLS Gen 2 <br/> - Azure Database for Oracle, Postgres, SQL Server <br/> - $\textcolor{orange}{\text{Audit Logs were not enabled for integration}}$ |
+| Snowflake| Yes                | - Snowflake account integration <br/> - Configure access to relevant databases and schemas <br/> - Verify query history and access logging |
+| Databricks| No                |  |
+| Office 365| Yes               | - Microsoft Graph API integration <br/> - Configure access to relevant services (SharePoint, OneDrive, etc.)|
 
 <br/>
 
@@ -102,7 +103,7 @@ Referece URL for HTML chart: <a href="https://dccpl.work/cgah-dspm-ve/vendor-a/v
 
 #### Evaluation Summary
 
-Varonis showed limited capabilities in meeting the requirements of Capital Group's data security posture management (DSPM) needs. Challenges included incomplete data discovery due to infrastructure issues, reliance on custom data dictionaries for classification instead of a robust sampling mechanism, and a lack of demonstrated threat detection capabilities. Furthermore, the solution was found to be very expensive for the scope of data discovery achieved, making it a non-viable option in comparison to other vendors. The overall integration process also proved complex, with minimal or few missing details available in product documentation. Varonis is recommended for exploration when data privacy and governance is important within Office 365 environment.
+Varonis demonstrated limited capabilities in meeting Capital Group's data security posture management (DSPM) requirements. Challenges included incomplete and potentially inaccurate data discovery due to platform limitations and configuration complexities, reliance on custom data dictionaries for classification instead of robust data sampling, and insufficient threat detection capabilities.  Furthermore, the solution's high cost relative to the limited data discovery achieved positioned it as a less competitive option compared to other vendors. The integration process was also complex, with gaps in product documentation. While Varonis might be suitable for organizations prioritizing data privacy and governance within Office 365 environments, it did not adequately address Capital Group's broader DSPM needs. 
 
 ***
 ***
