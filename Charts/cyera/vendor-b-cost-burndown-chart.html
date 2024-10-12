@@ -1,92 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS vs Azure Cost Analysis with Line Overlay</title>
+<html>
+  <head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-        google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(drawChart);
+      // Load the Google Charts library
+      google.charts.load('current', {packages: ['corechart', 'bar']});
+      google.charts.setOnLoadCallback(drawCharts);
 
-        function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-                ['Day', 'AWS (USD)', 'Azure (USD)'],
-                ['Tuesday', 426.40, 156.65],
-                ['Wednesday', 1136.53, 479.16],
-                ['Thursday', 2435.86, 562.51],
-                ['Friday', 1943.15, 432.22],
-                ['Saturday', 1147.90, 145.34],
-                ['Sunday', 1040.54, 140.23],
-                ['Monday', 534.88, 128.81]
-            ]);
+      var chart;
+      var lineChart;
 
-            var options = {
-                title: 'AWS vs Azure Cost Analysis Over a Week',
-                isStacked: true,
-                hAxis: {
-                    title: 'Days',
-                },
-                vAxis: {
-                    title: 'Cost (USD)',
-                },
-                colors: ['#1b9e77', '#d95f02'],
-                legend: { position: 'top' }
-            };
+      function drawCharts() {
+        // Data for stacked bar chart (AWS and Azure Costs)
+        var data = google.visualization.arrayToDataTable([
+          ['Day', 'AWS (USD)', 'Azure (USD)'],
+          ['Tuesday', 281.03, 24.44],
+          ['Wednesday', 8464.45, 189.06],
+          ['Thursday', 4704.03, 85.28],
+          ['Friday', 598.74, 60.35],
+          ['Saturday', 526.60, 60.43],
+          ['Sunday', 400.97, 59.00],
+          ['Monday', 361.35, 19.73]
+        ]);
 
-            var chart = new google.visualization.ColumnChart(document.getElementById('column_chart'));
-            chart.draw(data, options);
-            
-            // Adding the line chart overlay
-            var lineData = new google.visualization.DataTable();
-            lineData.addColumn('string', 'Day');
-            lineData.addColumn('number', 'Peak Cost');
-            lineData.addRows([
-                ['Tuesday', 583.05], // 426.40 + 156.65
-                ['Wednesday', 1615.69], // 1136.53 + 479.16
-                ['Thursday', 2998.37], // 2435.86 + 562.51
-                ['Friday', 2375.37], // 1943.15 + 432.22
-                ['Saturday', 1293.24], // 1147.90 + 145.34
-                ['Sunday', 1180.77], // 1040.54 + 140.23
-                ['Monday', 663.69] // 534.88 + 128.81
-            ]);
+        // Calculate the peak costs as the sum of AWS and Azure for the line chart
+        var peakCostData = google.visualization.arrayToDataTable([
+          ['Day', 'Peak Cost (USD)'],
+          ['Tuesday', 281.03 + 24.44],
+          ['Wednesday', 8464.45 + 189.06],
+          ['Thursday', 4704.03 + 85.28],
+          ['Friday', 598.74 + 60.35],
+          ['Saturday', 526.60 + 60.43],
+          ['Sunday', 400.97 + 59.00],
+          ['Monday', 361.35 + 19.73]
+        ]);
 
-            var lineOptions = {
-                title: 'Peak Cost',
-                curveType: 'function',
-                legend: { position: 'none' },
-                vAxis: {
-                    title: 'Peak Cost (USD)',
-                    minValue: 0
-                },
-                colors: ['#FF5733'], // Line color for peak values
-                series: { 0: { type: 'line', lineWidth: 2 } }
-            };
+        // Options for stacked vertical bar chart
+        var options = {
+          title: 'Cyera - AWS vs Azure Cost Burn Down',
+          isStacked: true,
+          hAxis: {
+            title: 'Days',
+            minValue: 0,
+          },
+          vAxis: {
+            title: 'Cost (USD)',
+            minValue: 0,
+          },
+          colors: ['#1b9e77', '#d95f02'],  // Green for AWS, Orange for Azure
+          legend: { position: 'top', textStyle: {fontSize: 12} },
+        };
 
-            var lineChart = new google.visualization.LineChart(document.getElementById('line_chart'));
-            lineChart.draw(lineData, lineOptions);
-        }
+        // Create and draw the stacked vertical bar chart
+        chart = new google.visualization.ColumnChart(document.getElementById('stacked_bar_chart'));
+        chart.draw(data, options);
 
-        // Responsive chart drawing
-        function resizeCharts() {
-            drawChart();
-        }
+        // Options for line chart (same Y-axis range for consistency)
+        var lineOptions = {
+          title: 'Peak Cost Over Time',
+          curveType: 'function',
+          legend: { position: 'none' },
+          hAxis: {
+            title: 'Days',
+          },
+          vAxis: {
+            title: 'Peak Cost (USD)',
+            minValue: 0
+          },
+          colors: ['#d95f02'],  // Orange for peak costs
+        };
 
-        // Redraw charts on window resize
-        window.addEventListener('resize', resizeCharts);
+        // Create and draw the line chart with peak costs
+        lineChart = new google.visualization.LineChart(document.getElementById('line_chart'));
+        lineChart.draw(peakCostData, lineOptions);
+      }
+
+      // Redraw charts when the window is resized to make them responsive
+      window.onresize = function() {
+        drawCharts();
+      };
     </script>
-    <style>
-        /* Container styles for responsiveness */
-        #column_chart, #line_chart {
-            width: 100%;
-            height: 500px;
-            min-height: 300px; /* Ensure a minimum height */
-        }
-    </style>
-</head>
-<body>
-    <h1>AWS vs Azure Cost Analysis with Line Overlay</h1>
-    <div id="column_chart"></div>
-    <div id="line_chart"></div>
-</body>
+  </head>
+  <body>
+    <!-- Div for Stacked Bar Chart -->
+    <div id="stacked_bar_chart" style="width: 100%; height: 45vh;"></div>
+    
+    <!-- Div for Line Chart -->
+    <div id="line_chart" style="width: 100%; height: 45vh;"></div>
+  </body>
 </html>
