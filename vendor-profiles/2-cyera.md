@@ -51,7 +51,7 @@
 * **Data Encryption**:Lack of transparency in data encryption for sampling and analysis of the classification process.
 * **Automated Remediation**: No automated remediation capabilities demonstrated but integration is possible with Wiz, Jira and Webhooks.
 
-#### [Review Required] Integration Checklist
+#### Integration Checklist
 
 | Resource | Integration Status | Notes |
 |----------|------------|-------|

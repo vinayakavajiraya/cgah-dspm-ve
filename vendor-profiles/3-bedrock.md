@@ -5,26 +5,28 @@
 #### Overview
 * Deployment was complete with all the required data sources.
 * Data classification is quite accurate with discovered data.
-* <span style="color: red;">Challenges in Azure ADLS Gen 2 and blob storage. Data discovery was not accurate as volume was off by 3 TB against actual volume.</span>
-* <span style="color: orange;">User experience is not intuative and KPIs are not usefull (Ex: Sharepoint KPI has a value of 226.k and M365 has the value of 3.0 M, which does not make sense while interpreting as files or list rows or what is the category)</span>
-* <span style="color: green;">Least expensive and very fast data discovery and catalogging in comparision of all the 4 vendors. (Due to fingerprinting and hashing technology against reading all the data from each data stores).</span>
+* $\textcolor{red}{\text{Challenges in Azure ADLS Gen 2 and blob storage. Data discovery was not accurate as volume was off by 3 TB against actual volume on the review day.}}$
+* $\textcolor{red}{\text{Bedrock doesnot use standard or appropriate scanning methods for Databricks, instead scans the source (ADLS Gen 2 if Databricks is deployedi n Azure and AWS S3 buckets if Databrocks is deployedin AWS) resulting in invalid results as the gold data or aggregated data is not considered for the scans.)}}$
+* $\textcolor{orange}{\text{User experience is not intuative and KPIs are not usefull (Ex: Sharepoint KPI has a value of 226.k and M365 has the value of 3.0 M, which does not make sense while interpreting as files or list rows or what is the category)}}$
+* $\textcolor{orange}{\text{Least expensive and very fast data discovery and catalogging in comparision of all the 4 vendors. (Due to fingerprinting and hashing technology against reading all the data from each data stores). This can lead to incomplete data discovery, as it might miss hidden or nuanced data patterns (e.g., irregular data distributions, outliers, or infrequent data types).}}$
+* $\textcolor{orange}{\text{Bedrock was not able to scan the data from Azure Data Blob storage (containers), sighting a bug in the product.}}$
 
 
 #### Key Features
-| Bedrock Feature | Availability | Description |
-|-------------------|---|-------------|
-| Data Discovery    | ✓ | Automatically identifies and catalogs sensitive data across various data sources |
-| Data Classification | ✓ | Data classification is based on sampling hence the classified data were quite accurate. |
-| Risk Assessment   | ❕ | Evaluates data security risks and provides limited actionable insights and provides very limited data tracability using cloud trail logs.|
-| Access Control    | ❕ | Data access permissions monitoring was not robust and not reliable |
-| Compliance Monitoring | ❌ | Ensures adherence to regulatory requirements and industry standards but no custom control for choosing specific regulatory requirements.|
-| Threat Detection  | ❕ | Potential security threats and anomalies detection rate is Limited as exposure and access control explaination or details on UI is very limited |
-| Data Encryption   | ❕ | Bedrock team mentioned that metadata is sent to Bedrock cloud for classification |
-| Activity Monitoring | ✓ | Tracks and logs user activities related to sensitive data using cloud trail logs. |
-| Incident Response | ❕ | Bedrock team captures incident reposnse for data at rest and not in motion. |
-| Integration Capabilities | ❌ | Limited integration capabilities with existing security tools and cloud platforms |
-| Reporting and Analytics | ! | Generates high level reports and provides data visualization. Not an intuative UI as there is not drill-down reports or visualizations |
-| Automated Remediation | ❕ | Provides limited remediation capabilities but not automated solutions for addressing identified security issues. |
+| Bedrock Feature | Availability | Description | $\textcolor{Red}{\text{Notes [For Ahead Only]}}$ |
+|-------------------|---|-------------|---|
+| Data Discovery    | ✓ | Automatically identifies and catalogs sensitive data across various data sources |  |
+| Data Classification | ✓ | Data classification is based on sampling hence the classified data were quite accurate. |  |
+| Risk Assessment   | ❕ | Evaluates data security risks and provides limited actionable insights and provides very limited data tracability using cloud trail logs.|  |
+| Access Control    | ❕ | Data access permissions monitoring was not robust and not reliable |  |
+| Compliance Monitoring | ❌ | Ensures adherence to regulatory requirements and industry standards but no custom control for choosing specific regulatory requirements.|  |
+| Threat Detection  | ❕ | Potential security threats and anomalies detection rate is Limited as exposure and access control explaination or details on UI is very limited |  |
+| Data Encryption   | ❕ | Bedrock team mentioned that metadata is sent to Bedrock cloud for classification |  |
+| Activity Monitoring | ✓ | Tracks and logs user activities related to sensitive data using cloud trail logs. |  |
+| Incident Response | ❕ | Bedrock team captures incident reposnse for data at rest and not in motion. |  |
+| Integration Capabilities | ❌ | Limited integration capabilities with existing security tools and cloud platforms |  |
+| Reporting and Analytics | ! | Generates high level reports and provides data visualization. Not an intuative UI as there is not drill-down reports or visualizations |  |
+| Automated Remediation | ❕ | Provides limited remediation capabilities but not automated solutions for addressing identified security issues. |  |
 
 #### <u>Strengths & Weaknesses</u>
 
