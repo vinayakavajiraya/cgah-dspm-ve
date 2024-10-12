@@ -137,4 +137,11 @@ While Cyera shows promise in its integration capabilities with major cloud provi
 Further development and improvements in these areas would be necessary for Cyera to provide a more comprehensive and reliable DSPM offering.
 
 ***
+
+#### Rederences
+1. Review meeting URL: Not available as meeting was not recorded due incomplete scan.
+
+2. Excel file containing Cyera response for FR and NFRs: [Download Exxcel File](../assets/cyera/reports/Cyera_Response_Master_DSPM_Vendor_Eval_N-FRs.xlsx)
+
+3. Final Report by Cyera: [Download PDF File](../assets/cyera/reports/Cyera%20Ahead%20CapGroup%20PoV%20findings.pdf)
 ***
