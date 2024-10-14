@@ -176,3 +176,48 @@ Further development and improvements in these areas would be necessary for Cyera
 ***
 ***
 
+## Bedrock
+### Rating: 3.89
+
+[Detailed Varonis Report](vendor-profiles/3-bedrock.md)
+
+#### Overview
+* Deployment was complete with all the required data sources.
+* Data classification is quite accurate with discovered data.
+* $\textcolor{red}{\text{Challenges in Azure ADLS Gen 2 and blob storage. Data discovery was not accurate as volume was off by 3 TB against actual volume on the review day.}}$
+* $\textcolor{red}{\text{Bedrock doesnot use standard or appropriate scanning methods for Databricks, instead scans the source (ADLS Gen 2 if Databricks is deployedi n Azure and AWS S3 buckets if Databrocks is deployedin AWS) resulting in invalid results as the gold data or aggregated data is not considered for the scans.)}}$
+* $\textcolor{orange}{\text{User experience is not intuative and KPIs are not usefull (Ex: Sharepoint KPI has a value of 226.k and M365 has the value of 3.0 M, which does not make sense while interpreting as files or list rows or what is the category)}}$
+* $\textcolor{orange}{\text{Bedrock was not able to scan the data from Azure Data Blob storage (containers), sighting a bug in the product.}}$
+* $\textcolor{orange}{\text{Bedrock's dashboard and UI is good at top level view. Drill-down information is very limited, making the bad user-experience leaving without contextual information..}}$
+* $\textcolor{green}{\text{Least expensive and very fast data discovery and catalogging in comparision of all the 4 vendors. (Due to fingerprinting and hashing technology against reading all the data from each data stores). This can lead to incomplete data discovery, as it might miss hidden or nuanced data patterns (e.g., irregular data distributions, outliers, or infrequent data types).}}$
+
+<br/>
+<br/>
+
+| Resource | Integration Status | Notes |
+|----------|------------|-------|
+| AWS      | Yes | - S3 Buckets <br/> - RDS for Oracle, Postgres, SQL Server  |
+| Azure    | Limited | - Azure AD integration <br/> - Azure Blob storage access <br/> - Limited integration with ADLS Gen 2 <br/> - Azure Database for Oracle, Postgres, SQL Server |
+| Snowflake| Yes | - Set up Snowflake account integration <br/>- Hive meta store <br/>- Verify query history and access logging |
+| Databricks| Limtied | - Databricks integration in AWS is complete. <br/> - Databricks integration in Azure is limited. |
+| Office 365| Yes | - Set up Microsoft Graph API integration <br/> - Configure access to relevant services (SharePoint, OneDrive, etc.). |
+|||
+
+
+#### Bedrock Data Coverage:
+![Bedrock Data Coverage](/assets/bedrock/bedrock-data-coverage-chart.png)
+
+Reference URL for HTML Chart: [Bedrock Data Coverage Chart](https://dccpl.work/cgah-dspm-ve/vendor-c/vendor-c-data-coverage-chart.html)
+
+#### Bedrock Cost Analysis:
+![Bedrock - AWS vs Azure Cost](/assets/bedrock/bedrock-aws-azure-cost-burn-down-chart.png)
+
+
+![Bedrock - Peak Cost](/assets/bedrock/bedrock-aws-azure-peak-cost-chart.png)
+
+HTML Chart URL: [Bedrock Cost Burn Down and Peak Cost charts](https://dccpl.work/cgah-dspm-ve/vendor-c/vendor-c-cost-burndown-chart.html)
+
+#### Evaluation Summary
+Bedrock demonstrates strong capabilities in data discovery and classification across multiple cloud platforms, including AWS, Azure, Snowflake, Databricks, and Office 365. However, the evaluation uncovers several significant limitations. These include limited posture management features, inaccurate data discovery (with only 50% coverage) for Azure ADLS Gen 2 and blob containers, and unreliable access control and permissions monitoring. Additionally, the platform lacks comprehensive risk assessment capabilities, threat detection, and transparency in data encryption during the classification process. Bedrock also offers limited incident response features and lacks automated remediation, although it can integrate with third-party tools to address this gap.
+
+While Bedrock excels in its integration with major cloud providers and services, its overall effectiveness is impacted by these critical shortcomings. The inaccurate data discovery, insufficient posture management, and limited risk assessment and incident response capabilities reduce its ability to provide robust data security, which is essential in today's cloud environments.

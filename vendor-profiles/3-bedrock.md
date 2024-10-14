@@ -74,7 +74,7 @@
 
 ### Chart View
 ![Bedrock Data Coverage](../assets/bedrock/bedrock-data-coverage-chart.png)
-HTML CHart URL: [Bedrock Data Discovery](https://dccpl.work/cgah-dspm-ve/vendor-c/vendor-c-data-coverage-chart.html)
+HTML Chart URL: [Bedrock Data Discovery](https://dccpl.work/cgah-dspm-ve/vendor-c/vendor-c-data-coverage-chart.html)
 
 <br/>
 
@@ -99,7 +99,7 @@ S3 Bucket - File Level Classification
 
 ***
 
-**[WIP] Cost Analysis:**
+**Cost Analysis:**
 
 | Element | AWS Cost (USD) | Azure Cost (USD) |
 |---|---|---|
