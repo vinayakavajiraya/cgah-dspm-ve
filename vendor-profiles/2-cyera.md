@@ -99,8 +99,8 @@ $\textcolor{red}{\text{Important Observation [For Ahead Only]:}}$
 
 **Cost Analysis:**
 
-| Day                               | Cost (USD) |
-|---|---|
+| Day                               | AWS Cost (USD) |  Azure Cost (USD) | 
+|---|---|---|
 | Day 1 - Tuesday, 10-Spet-2024     | $ 281.03        | $ 24.44           |
 | Day 2 - Wednesday, 11-Spet-2024   | $ 8464.45       | $ 189.06          |
 | Day 3 - Thursday, 12-Spet-2024    | $ 4704.03       | $ 85.28           |
@@ -109,7 +109,7 @@ $\textcolor{red}{\text{Important Observation [For Ahead Only]:}}$
 | Day 6 - Sunday, 15-Spet-2024      | $ 400.97        | $ 59.00           |
 | Day 7 - Monday, 16-Spet-2024      | $ 361.35        | $ 19.73           |
 | **Total**                         | **$ 15337.17**  | **$ 498.29**      |
-|||
+||||
 
 #### Cyera Cost Analysis:
 ![Cyera AWS vs Azure Cost Burn Down](../assets/cyera/cost/cyera-aws-azure-cost-burn-down-chart.png)
