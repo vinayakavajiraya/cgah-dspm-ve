@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      // Load the Google Charts library
+      google.charts.load('current', {packages: ['corechart', 'bar']});
+      google.charts.setOnLoadCallback(drawCharts);
+
+      var chart;
+      var lineChart;
+
+      function drawCharts() {
+        // Data for stacked bar chart (AWS and Azure Costs)
+        var data = google.visualization.arrayToDataTable([
+          ['Day', 'AWS (USD)', 'Azure (USD)'],
+          ['Tuesday', 289.59, 30.69],
+          ['Wednesday', 268.57, 47.03],
+          ['Thursday', 304.10, 55.87],
+          ['Friday', 278.71, 48.29],
+          ['Saturday', 269.23, 66.57],
+          ['Sunday', 315.93, 125.22],
+          ['Monday', 289.74, 91.03]
+        ]);
+
+        // Calculate the peak costs as the sum of AWS and Azure for the line chart
+        var peakCostData = google.visualization.arrayToDataTable([
+          ['Day', 'Peak Cost (USD)'],
+          ['Tuesday', 289.59 + 30.69],
+          ['Wednesday', 268.57 + 47.03],
+          ['Thursday', 304.10 + 55.87],
+          ['Friday', 278.71 + 48.29],
+          ['Saturday', 269.23 + 66.57],
+          ['Sunday', 315.93 + 125.22],
+          ['Monday', 289.74 + 91.03]
+        ]);
+
+        // Options for stacked vertical bar chart
+        var options = {
+          title: 'AWS vs Azure Cost by Day',
+          isStacked: true,
+          hAxis: {
+            title: 'Days',
+            minValue: 0,
+          },
+          vAxis: {
+            title: 'Cost (USD)',
+            minValue: 0,
+          },
+          colors: ['#1b9e77', '#d95f02'],  // Green for AWS, Orange for Azure
+          legend: { position: 'top', textStyle: {fontSize: 12} },
+        };
+
+        // Create and draw the stacked vertical bar chart
+        chart = new google.visualization.ColumnChart(document.getElementById('stacked_bar_chart'));
+        chart.draw(data, options);
+
+        // Options for line chart (same Y-axis range for consistency)
+        var lineOptions = {
+          title: 'Peak Cost Over Time',
+          curveType: 'function',
+          legend: { position: 'none' },
+          hAxis: {
+            title: 'Days',
+          },
+          vAxis: {
+            title: 'Peak Cost (USD)',
+            minValue: 0
+          },
+          colors: ['#d95f02'],  // Orange for peak costs
+        };
+
+        // Create and draw the line chart with peak costs
+        lineChart = new google.visualization.LineChart(document.getElementById('line_chart'));
+        lineChart.draw(peakCostData, lineOptions);
+      }
+
+      // Redraw charts when the window is resized to make them responsive
+      window.onresize = function() {
+        drawCharts();
+      };
+    </script>
+  </head>
+  <body>
+    <!-- Div for Stacked Bar Chart -->
+    <div id="stacked_bar_chart" style="width: 100%; height: 45vh;"></div>
+    
+    <!-- Div for Line Chart -->
+    <div id="line_chart" style="width: 100%; height: 45vh;"></div>
+  </body>
+</html>
