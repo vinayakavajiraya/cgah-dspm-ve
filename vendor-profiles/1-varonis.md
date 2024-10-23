@@ -101,8 +101,8 @@ $\textcolor{Red}{\text{Important Observations [For Ahead Only]}}$:
 
 **Cost Analysis:**
 
-| Day | Cost (USD) |
-|---|---|
+| Day | AWS Cost (USD) | Azure Cost (USD) |
+|---|---|---|
 | Day 1 - Tuesday, 3-Sept-2024      | $ 426.40        | $ 156.65          |
 | Day 2 - Wednesday, 4-Sept-2024    | $ 1,136.53      | $ 479.16          |
 | Day 3 - Thursday,  5-Sept-2024    | $ 2,435.86      | $ 562.51          |
@@ -111,7 +111,7 @@ $\textcolor{Red}{\text{Important Observations [For Ahead Only]}}$:
 | Day 6 - Sunday, 8-Sept-2024       | $ 1,040.54      | $ 140.23          |
 | Day 7 - Monday, 9-Sept-2024       | $ 534.88        | $ 128.81          |
 | **Total**                         | **$ 8,665.26**  | **$ 2,044.92**    |
-|||
+||||
 
 **Varonis Cost Anaylsis:**
 ![Varonis AWS Azure Cost Burn Down](../assets/varonis/varonis-aws-azure-cost-burn-down.png)
